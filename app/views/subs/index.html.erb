@@ -1,0 +1,9 @@
+<h1>Department Store</h1>
+<p>This is a department store whre many items are available to purchase.</p>
+<p>Click the link below to view items.<p>
+<%= link_to "View Items", new_sub_path %>
+<ul>
+  <% @subs.each do |s| %>
+    <li><%= link_to s.name, sub_path(s) %></li>
+  <% end %>
+</ul>

@@ -1,0 +1,7 @@
+<h1><%= @sub.id ? "Edit Item" : "Create New Item" %></h1>
+<hr />
+<%= form_for @sub do |f| %>
+  <%= f.label :item %>
+  <%= f.text_field :name, required: true, autofocus: true, placeholder: "Name" %>
+  <%= f.submit %>
+<% end %>
